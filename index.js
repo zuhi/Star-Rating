@@ -8,7 +8,6 @@ const ratingDiv = document.querySelector('#rating-result');
 
 function rating(starNo){
     const starDiv = document.querySelectorAll('.star img');
-    console.log(starDiv.length);
     for(let i =0; i<parseInt(starNo);i++){
         starDiv[i].src ='./filled-star.png';
     }
