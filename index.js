@@ -13,6 +13,14 @@ function reset() {
     }
 
 }
+function hoverChange(starNo){
+
+    const starDiv = document.querySelectorAll('.star img');
+    for(let i =0; i<parseInt(starNo);i++){
+        starDiv[i].src ='./light-yellow.png';
+    }
+
+}
 
 function rating(starNo){
     const starDiv = document.querySelectorAll('.star img');
@@ -22,24 +30,66 @@ function rating(starNo){
     ratingDiv.innerHTML = `You rated ${starNo}/${starDiv.length}`;
 }
 
+//Star1 Hover, mouse Out & click
+star1.addEventListener('mouseover',(event)=>{
+    hoverChange("1");
+});
+
+star1.addEventListener("mouseout", event => {
+    reset();
+  });
+
 star1.addEventListener('click',(event)=>{
     reset();
     rating("1");
 });
 
-star2.addEventListener('click',(event)=>{
+
+//Star2 Hover, mouse Out & click
+star2.addEventListener('mouseover',(event)=>{
+    hoverChange("2"); 
+});
+star2.addEventListener("mouseout", event => {
+
     reset();
+  });
+star2.addEventListener('click',(event)=>{
     rating("2");
 });
 
+
+//Star3 Hover, mouse Out & click
+star3.addEventListener('mouseover',(event)=>{
+    hoverChange("3"); 
+});
+star3.addEventListener("mouseout", event => {
+    reset();
+  });
 star3.addEventListener('click',(event)=>{
     reset();
     rating("3");
 });
+
+//Star4 Hover, mouse Out & click
+star4.addEventListener('mouseover',(event)=>{
+    hoverChange("4"); 
+});
+star4.addEventListener("mouseout", event => {
+    reset();
+  });
 star4.addEventListener('click',(event)=>{
     reset()
     rating("4");
 });
+
+
+//Star5 Hover, mouse Out & click
+star5.addEventListener('mouseover',(event)=>{
+    hoverChange("5"); 
+});
+star5.addEventListener("mouseout", event => {
+    reset();
+  });
 star5.addEventListener('click',(event)=>{
     reset();
     rating("5");
