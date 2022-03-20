@@ -30,6 +30,12 @@ function rating(starNo){
     ratingDiv.innerHTML = `You rated ${starNo}/${starDiv.length}`;
 }
 
+    
+function handler(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
 //Star1 Hover, mouse Out & click
 star1.addEventListener('mouseover',(event)=>{
     hoverChange("1");
@@ -42,6 +48,8 @@ star1.addEventListener("mouseout", event => {
 star1.addEventListener('click',(event)=>{
     reset();
     rating("1");
+    star1.addEventListener("mouseout", handler, true);
+    star1.addEventListener("mouseover", handler, true);
 });
 
 
@@ -55,6 +63,8 @@ star2.addEventListener("mouseout", event => {
   });
 star2.addEventListener('click',(event)=>{
     rating("2");
+    star2.addEventListener("mouseout", handler, true);
+    star2.addEventListener("mouseover", handler, true);
 });
 
 
@@ -68,6 +78,8 @@ star3.addEventListener("mouseout", event => {
 star3.addEventListener('click',(event)=>{
     reset();
     rating("3");
+    star3.addEventListener("mouseout", handler, true);
+    star3.addEventListener("mouseover", handler, true);
 });
 
 //Star4 Hover, mouse Out & click
@@ -80,6 +92,9 @@ star4.addEventListener("mouseout", event => {
 star4.addEventListener('click',(event)=>{
     reset()
     rating("4");
+    star4.addEventListener("mouseout", handler, true);
+    star4.addEventListener("mouseover", handler, true);
+
 });
 
 
@@ -93,4 +108,6 @@ star5.addEventListener("mouseout", event => {
 star5.addEventListener('click',(event)=>{
     reset();
     rating("5");
+    star5.addEventListener("mouseout", handler, true);
+    star5.addEventListener("mouseover", handler, true);
 });
