@@ -58,10 +58,10 @@ star2.addEventListener('mouseover',(event)=>{
     hoverChange("2"); 
 });
 star2.addEventListener("mouseout", event => {
-
     reset();
   });
 star2.addEventListener('click',(event)=>{
+    reset();
     rating("2");
     star2.addEventListener("mouseout", handler, true);
     star2.addEventListener("mouseover", handler, true);
